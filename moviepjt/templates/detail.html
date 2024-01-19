@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{mve.img.url}}" width="300" height="300">
+        </div>
+        <div class="col-md-6">
+            <h4 class="card-title">{{mve.name}}</h4>
+            <h6 class="card-text">{{mve.desc}}</h6>
+            <h6 class="card-text">{{mve.year}}</h6>
+            <a href="{% url 'movieapp1:update' mve.id %}" class="btn btn-warning">Update</a>
+            <a href="{% url 'movieapp1:delete' mve.id %}" class="btn btn-warning">Delete</a>
+        </div>
+    </div>
+</div>
+
+<!--<img src="{{mve.img.url}}" width="100" height="100">-->
+<!--<h4>{{mve.name}}</h4>-->
+<!--<h5>{{mve.desc}}</h5>-->
+<!--<h5>{{mve.year}}</h5>-->
+<!--<a class="btn btn-warning" href ="{% url 'movieapp1:update' mve.id %}">Update</a>-->
+<!--<a class="btn btn-warning" href ="{% url 'movieapp1:delete' mve.id %}">Delete</a>-->
+{% endblock %}
